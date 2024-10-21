@@ -62,21 +62,23 @@
 **1.VMware虚拟机安装Ubuntu22.04 LTS**
 （1）Ubuntu镜像下载
 进入官网（官网下载速度较慢，所以选择清华大学镜像站[清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/)下载），找到Ubuntu-releases选择22.04.05版本。
-![[b8a01fe90adc1aabb73a4f9ac1d760f4 1.png]]
+![b8a01fe90adc1aabb73a4f9ac1d760f4.png](https://img.picui.cn/free/2024/10/22/67167f2944181.png)
 （2）虚拟机中安装Ubuntu22.04.05（由于安装时未记录过程，所以只有部分图片）![[eafd89f30510ae08555a8f16ceba7c63.png]]
--->![](C:\Users\Yjs\AppData\Local\Temp\20e06693-c02b-42c3-9e00-5325121934ce.png)
--->![](C:\Users\Yjs\AppData\Local\Temp\b4260d29-bfbe-44bb-8079-96aae83d72e1.png)
-由于这里我已经建立了一个虚拟机了所以这里映象文件没有显示，如果正常安装，下面会显示已检测到Ubuntu 64位 22.04.05，接下来就是用户名密码等的设定。处理器为2，处理器内核为2，共4。内存选用4GB.
+![eafd89f30510ae08555a8f16ceba7c63.png](https://img.picui.cn/free/2024/10/22/67167f2772d22.png)
+![20e06693-c02b-42c3-9e00-5325121934ce.png](https://img.picui.cn/free/2024/10/22/671682d3d0a22.png)
+由于这里我已经建立了一个虚拟机了所以这里映象文件没有显示，如果正常安装，下面会显示已检测到Ubuntu 64位 22.04.05。
+![b4260d29-bfbe-44bb-8079-96aae83d72e1.png](https://img.picui.cn/free/2024/10/22/6716830b462e8.png)
+接下来就是用户名密码等的设定。处理器为2，处理器内核为2，共4。内存选用4GB.
 网络设置选用默认的NAT，可正常使用。启动虚拟机,选择`Try Or Install Ubuntu`选项,进行安装，选择最小安装设置,取消更新勾选:
 （2）镜像源改变
 进入Ubuntu后需要进一步跟着配置，重启即可完成。（我个人跟着csdn进行了镜像源的改变，更换为了国内的镜像源
 `sudo cp /etc/apt/sources.list/etc/apt/==sources==.list.bak`）进行下一步
--->![](C:\Users\Yjs\AppData\Local\Temp\145f4111-14d2-4df5-990e-2d4739e8e35d.png)
--->![](C:\Users\Yjs\AppData\Local\Temp\51e182c1-9151-4d5e-8a4c-ee95ad8ba1d0.png)改用阿里云的镜像源
+![145f4111-14d2-4df5-990e-2d4739e8e35d.png](https://img.picui.cn/free/2024/10/22/671682d39cbee.png)
+![51e182c1-9151-4d5e-8a4c-ee95ad8ba1d0.png](https://img.picui.cn/free/2024/10/22/671682d5758bf.png)改用阿里云的镜像源
 (3)gcc的安装
 终端中使用`sudo apt install build-essential` 进行安装
 输入`gcc -v`检测是否正常安装，出现下图说明已经完成
-![](C:\Users\Yjs\AppData\Local\Temp\d50c3a3a-752d-4aae-a23d-b8412f2cd4ea.png)
+![d50c3a3a-752d-4aae-a23d-b8412f2cd4ea.png](https://img.picui.cn/free/2024/10/22/671682d36aaad.png)
 接下来安装我在乌班图中代码编译软件vim
 ```sudo apt-get install vim ```
 ## 二、算法的实现细节 测试数据生成方法
@@ -430,21 +432,21 @@ int main() {
 （3）斐波那契堆排序：找到最小元素，删除最小元素，合并子堆时间复杂度O（1）较短，插入、减小、删除等O（logn），总体平均为O（nlogn）
 2.时间测试
 （1）冒泡排序
-![[f0be8c0a575d515d4bf7319144f1bc91.png]]
+![f0be8c0a575d515d4bf7319144f1bc91.png](https://img.picui.cn/free/2024/10/22/6716845a96ce8.png)
 （2）基础堆排序
-![[0110a194bd92262de53f5f2e9f3e9f69.png]]
+![0110a194bd92262de53f5f2e9f3e9f69.png](https://img.picui.cn/free/2024/10/22/671684577ae03.png)
 （3）斐波那契堆排序
-![[55f0f90093f00ef01d464f05b55ef8a4.png]]
+![55f0f90093f00ef01d464f05b55ef8a4.png](https://img.picui.cn/free/2024/10/22/6716845765561.png)
 通过对比可以发现，冒泡排序的时间是最长的（等结果等的时间也是最长的），其余两种排序耗费时间都较短
 3.资源占用
 （1）冒泡排序
-![[2c553577e2d3bb7a27bcc1f9648d636e.png]]
+![2c553577e2d3bb7a27bcc1f9648d636e.png](https://img.picui.cn/free/2024/10/22/67168456b5393.png)
 图中可见冒泡排序的不管是时间还是cpu使用率都很高，显示出冒泡排序是一种十分耗费的排序，占用许多资源，跟每次循环都需要一次次交换有关
 （2）基础堆排序
-![[cc27a564663a271e8b28bc1ceb94d60c.png]]
+![cc27a564663a271e8b28bc1ceb94d60c.png](https://img.picui.cn/free/2024/10/22/67168457598d8.png)
 相比冒泡排序，可以发现cpu占比小很多，通过图中可以看见，在不同等级下，由于优化的不同，cpu占比也不稳定
 （3）斐波那契堆排序
-![[8e018361ba3dcc8764ef076dc9d77e63.png]]
+![8e018361ba3dcc8764ef076dc9d77e63.png](https://img.picui.cn/free/2024/10/22/671684572cdde.png)
 根据图中可以得出基本趋于稳定，并并没有很大波动
 #### 四、实验中遇到的问题及解决方案
 由于是第一次接触，难免会遇到许多问题
